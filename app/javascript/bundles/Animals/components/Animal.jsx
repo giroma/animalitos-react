@@ -3,11 +3,11 @@ import React from 'react';
 
 export default class Animal extends React.Component {
   static propTypes = {
-    animal: PropTypes.obj.isRequired, // this is passed from the Rails view
+    animal: PropTypes.object.isRequired, // this is passed from the Rails view
   };
 
   render() {
-
+    const animal = this.props.animal
     return (
 
           <figure className='animal'>
@@ -17,7 +17,7 @@ export default class Animal extends React.Component {
               <img src={animal.icon} className="animal-icon"/>
             </figcaption>
           </figure>
-        
+
     );
   }
 }
