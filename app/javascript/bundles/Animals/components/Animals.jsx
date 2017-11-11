@@ -22,15 +22,7 @@ export default class Animals extends React.Component {
 
     return (
       <section className='animals'>
-        {this.props.animals.map(animal => (
-          <figure className='animal'>
-            <div className='background' style={{backgroundImage: `url('${animal.image}')`}}></div>
-            <figcaption style={{backgroundColor: animal.bg_color}}>
-              <h2>{animal.name}</h2>
-              <img src={animal.icon} className="animal-icon"/>
-            </figcaption>
-          </figure>
-        ))}
+        {this.props.animals.map(animal => <Animal animal={animal} />)}
       </section>
     );
   }

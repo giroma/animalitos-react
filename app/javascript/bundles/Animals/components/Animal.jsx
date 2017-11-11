@@ -9,8 +9,7 @@ export default class Animal extends React.Component {
   render() {
 
     return (
-      <section className='animals'>
-        {this.props.animals.map(animal => (
+
           <figure className='animal'>
             <div className='background' style={{backgroundImage: `url('${animal.image}')`}}></div>
             <figcaption style={{backgroundColor: animal.bg_color}}>
@@ -18,8 +17,7 @@ export default class Animal extends React.Component {
               <img src={animal.icon} className="animal-icon"/>
             </figcaption>
           </figure>
-        ))}
-      </section>
+        
     );
   }
 }
